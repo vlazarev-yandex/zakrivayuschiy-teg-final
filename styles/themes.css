@@ -1,0 +1,34 @@
+/* В этом файле вы опишете значения переменных в разных цветовых схемах.
+Придерживайтесь такого именования классов:
+✦ theme-dark — класс тёмной темы
+✦ theme-light — класс светлой темы
+✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
+*/
+
+.theme-dark {
+  --Themes__mainColor: var(--Themes__mainColor-dark);
+  --Themes__background: var(--Themes__background-dark);
+  --Themes__background-color: var(--Themes__background-color-dark);
+}
+
+.theme-light {
+  --Themes__mainColor: var(--Themes__mainColor-light);
+  --Themes__background: var(--Themes__background-light);
+  --Themes__background-color: var(--Themes__background-color-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --Themes__mainColor: var(--Themes__mainColor-dark);
+    --Themes__background: var(--Themes__background-dark);
+    --Themes__background-color: var(--Themes__background-color-dark);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --Themes__mainColor: var(--Themes__mainColor-light);
+    --Themes__background: var(--Themes__background-light);
+    --Themes__background-color: var(--Themes__background-color-light);
+  }
+}

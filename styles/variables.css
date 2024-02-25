@@ -1,0 +1,34 @@
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --Themes__mainColor-light: #000;
+  --Themes__background-color-light: #fff;
+
+  --Themes__mainColor-dark: #00cc14;
+  --Themes__background-color-dark: #000;
+
+  --Themes__background-dark: url(../svg/pattern-dark.svg)
+    var(--Themes__background-color-dark);
+  --Themes__background-light: url(../svg/pattern-light.svg)
+    var(--Themes__background-color-light);
+
+  --header__font-family: "Press Start 2P";
+  --header__font-size: 14px;
+  --header__font-size-title: clamp(
+    3.0625rem,
+    calc(2.7104rem + 1.5023vw),
+    4.0625rem
+  ); /* поправить для маленьких экранов */
+  --header__font-size-subtitle: clamp(
+    0.875rem,
+    calc(0.6769rem + 0.8451vw),
+    1.4375rem
+  );
+
+  --mainSection__font-family: "Inter";
+  --mainSection__font-size: 18px;
+
+  --heart-sparks: #ff0000;
+
+  /* для настройки вариативности шрифтов */
+}
