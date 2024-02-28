@@ -527,6 +527,11 @@
   gap: 12px;
 }
 
+.save-button__floppy-disc-icon {
+  fill: var(--Themes__main-color);
+  color: var(--Themes__main-color);
+}
+
 /* ------------------------------------------------------------------------------------------------------------ */
 /* фильтры для картинок */
 .image__grayscale {
