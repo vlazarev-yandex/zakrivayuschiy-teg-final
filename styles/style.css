@@ -535,29 +535,29 @@
 /* ------------------------------------------------------------------------------------------------------------ */
 /* фильтры для картинок */
 .image__grayscale {
-  filter: grayscale(0.5);
+  filter: grayscale(0.5) hue-rotate(-30deg) invert(0.1);
 }
 
 .image__contrast {
-  filter: contrast(20%);
+  filter: contrast(20%) hue-rotate(-30deg) invert(0.1);
 }
 
 .image__saturate {
-  filter: saturate(158%);
+  filter: saturate(158%) hue-rotate(-30deg) invert(0.1);
 }
 
 .image__hue-rotate {
-  filter: hue-rotate(-90deg);
+  filter: hue-rotate(-90deg) invert(0.1);
 }
 
 .image__sepia {
-  filter: sepia(80%);
+  filter: sepia(80%) hue-rotate(-30deg) invert(0.1);
 }
 
 .image__invert {
-  filter: invert(0.7);
+  filter: invert(0.7) hue-rotate(-30deg);
 }
 
 .image__blur {
-  filter: blur(3.2rem);
+  filter: hue-rotate(-60deg) invert(1);
 }
