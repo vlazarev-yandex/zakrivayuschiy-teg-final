@@ -479,7 +479,7 @@
 /* диалоговое окно */
 .save-button__dialog {
   display: none;
-  transition: opacity 0.1s ease-in-out;
+  /* transition: opacity 0.1s ease-in-out; */
 
   width: 357px;
   height: fit-content;
@@ -491,7 +491,6 @@
 
 @media (width <= 375px) {
   .save-button__dialog {
-    /* сделать закрытие по клику любой области */
     width: 341px;
   }
 }
