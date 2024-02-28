@@ -20,23 +20,13 @@
   position: relative;
 
   padding: 100px 0;
-  background-color: var(--Themes__background-color);
+  background-image: var(--Themes__background-image);
+  background-size: cover;
 
   display: flex;
   flex-direction: column;
 
   align-items: center;
-}
-
-.page::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  background: var(--Themes__background);
-  background-size: 4px;
-  z-index: -1;
 }
 
 .main {
@@ -48,7 +38,7 @@
 /* ------------------------------------------------------------------------------------------------------------ */
 /* header */
 .header {
-  color: (--Themes__mainColor);
+  color: var(--Themes__main-color);
   font-weight: 400;
   font-family: var(--header__font-family), sans-serif;
   font-size: var(--header__font-size);
@@ -56,7 +46,7 @@
   text-align: center;
 
   width: min(100%, 696px);
-  border: 2px solid var(--Themes__mainColor, #000);
+  border: 2px solid var(--Themes__main-color, #000);
   background: var(--Themes__background-color, #fff);
   padding-block-start: 136px; /* desktop */
   padding-block-end: 25px;
@@ -166,13 +156,13 @@
 /* ------------------------------------------------------------------------------------------------------------ */
 /* main-section */
 .mainSection {
-  color: var(--Themes__mainColor);
+  color: var(--Themes__main-color);
   font-family: var(--mainSection__font-family), sans-serif;
   font-size: var(--mainSection__font-size);
   font-variation-settings: "wght" 700, "slnt" normal;
 
   width: min(100%, 696px);
-  border: 2px solid var(--Themes__mainColor, #000);
+  border: 2px solid var(--Themes__main-color, #000);
   background: var(--Themes__background-color, #fff);
 
   margin-block-end: 50px;
@@ -197,16 +187,57 @@
   }
 }
 
+.mainSection__image-container {
+  position: relative;
+}
+
 .mainSection__image {
   background-color: blueviolet;
-  /* width: 696px; */
+  width: 696px;
   aspect-ratio: 1/1;
   background-size: contain;
+  padding: 25px;
 }
 
 @media (width <= 500px) {
   .mainSection__image {
     width: 371px;
+  }
+}
+
+.mainSection__watermark {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+
+  color: var(--Themes__main-color, #000);
+  -webkit-text-stroke-width: 1;
+  -webkit-text-stroke-color: var(--Themes__background-color, #fff);
+  font-family: var(--header__font-family);
+  font-size: var(--header__font-size);
+  line-height: normal;
+  text-transform: uppercase;
+
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+
+  text-shadow: -1px 0 var(--Themes__background-color),
+    0 1px var(--Themes__background-color), 1px 0 var(--Themes__background-color),
+    0 -1px var(--Themes__background-color);
+}
+
+@supports ((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
+  .mainSection__watermark {
+    -webkit-text-stroke: 1px var(--Themes__background-color);
+    text-stroke: 1px var(--Themes__background-color);
+    text-shadow: none;
+  }
+}
+
+@media (width <= 500px) {
+  .mainSection__watermark {
+    top: 25px;
+    right: 11px;
   }
 }
 
@@ -239,8 +270,8 @@
 
 .flat-button {
   background-color: var(--Themes__background-color);
-  border: 2px solid var(--Themes__mainColor, #000);
-  color: var(--Themes__mainColor);
+  border: 2px solid var(--Themes__main-color, #000);
+  color: var(--Themes__button-text-color);
 
   display: flex;
   flex-direction: row;
@@ -260,17 +291,13 @@
   width: 100%;
   height: 100%;
 
-  background-color: var(--Themes__mainColor);
+  background-color: var(--Themes__main-color);
   position: absolute;
   left: 0;
   top: 0;
 
   transform: translateX(-100%);
   transition: transform 0.25s ease-in-out;
-}
-
-.flat-button:hover {
-  color: var(--Themes__background-color);
 }
 
 .flat-button:hover::before {
@@ -283,8 +310,13 @@
 }
 
 .flat-button:focus-visible {
-  box-shadow: 2px 2px 0px 0px var(--Themes__mainColor);
+  box-shadow: 2px 2px 0px 0px var(--Themes__main-color);
   outline: none;
+}
+
+.flat-button:active {
+  transform: scale(0.75);
+  transition: transform 0.2s ease;
 }
 
 .card__like-button {
@@ -297,7 +329,7 @@
   font-family: var(--header__font-family), sans-serif;
   font-size: var(--header__font-size);
   line-height: 90%;
-
+  mix-blend-mode: difference; /* разобраться, как это вообще работает */
   z-index: 2;
 }
 
@@ -334,16 +366,16 @@
 }
 
 .card__icon-button:focus-visible {
-  border: 2px var(--Themes__mainColor) solid;
+  border: 2px var(--Themes__main-color) solid;
 }
 
 .card__icon-button:hover .core {
-  fill: var(--Themes__mainColor);
+  fill: var(--Themes__main-color);
   transition: fill 0.3s ease-in-out;
 }
 
 .card__icon-button:hover .main-body {
-  fill: var(--Themes__mainColor);
+  fill: var(--Themes__main-color);
   transition: fill 0.3s ease-in-out;
   transition-delay: 0.05s;
 }
@@ -360,7 +392,7 @@
 }
 
 .like-icon {
-  fill: var(--Themes__mainColor);
+  fill: var(--Themes__main-color);
   width: fit-content;
   padding: 0;
 }
@@ -372,7 +404,7 @@
 }
 
 .contour {
-  fill: var(--Themes__mainColor);
+  fill: var(--Themes__main-color);
   transition: fill 0.1s linear;
 }
 
@@ -437,8 +469,93 @@
 }
 
 .footer__floppy-disc-icon {
-  fill: currentColor;
+  fill: var(--Themes__button-text-color);
   transition: fill 1s ease;
-
+  mix-blend-mode: difference;
   z-index: 1;
 }
+
+/* ------------------------------------------------------------------------------------------------------------ */
+/* диалоговое окно */
+.save-button__dialog {
+  display: grid;
+  gap: 30px;
+  transition: opacity 0.3s ease-in-out;
+
+  width: 357px;
+  height: fit-content;
+  padding: 31.5px 32.5px 30.5px 31.5px;
+
+  border: 2px solid var(--Themes__main-color, #000);
+  background: var(--Themes__background-color, #fff);
+}
+
+@media (width <= 375px) {
+  .save-button__dialog {
+    /* сделать закрытие по клику любой области */
+    width: 341px;
+  }
+}
+
+.save-button__dialog::backdrop {
+  opacity: 0.75;
+  background-color: var(--Themes__main-color, #000);
+}
+
+.save-button__dialog-close-button {
+  width: 100%;
+  height: 38px;
+}
+
+.save-button__dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+  transition-delay: 0.3s;
+}
+
+.save-button__dialog:is([open]) {
+}
+
+.save-button__dialog-text {
+  color: var(--Themes__main-color, #000);
+  font-family: var(--header__font-family);
+  font-size: var(--header__font-size);
+  line-height: 150%; /* 21px */
+  text-transform: uppercase;
+}
+
+.save-button__dialog-title-container {
+  display: grid; 
+  grid-template-columns: repeat(2, auto);
+  gap: 12px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+/* фильтры для картинок */
+.image__grayscale {
+  filter: grayscale(0.5);
+} 
+
+.image__contrast {
+  filter: contrast(20%);
+} 
+
+.image__saturate {
+  filter: saturate(158%);
+} 
+
+.image__hue-rotate {
+  filter: hue-rotate(-90deg);
+} 
+
+.image__sepia {
+  filter: sepia(80%);
+} 
+
+.image__invert {
+  filter: invert(0.7);
+} 
+
+.image__blur {
+  filter: blur(3.2rem);
+} 
