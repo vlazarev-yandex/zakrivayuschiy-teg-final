@@ -480,7 +480,7 @@
 .save-button__dialog {
   display: grid;
   gap: 30px;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
 
   width: 357px;
   height: fit-content;
@@ -510,7 +510,6 @@
 .save-button__dialog:not([open]) {
   pointer-events: none;
   opacity: 0;
-  transition-delay: 0.3s;
 }
 
 .save-button__dialog-text {

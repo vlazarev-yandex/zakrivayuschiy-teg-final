@@ -562,12 +562,13 @@
             Вставьте  дискету, чтобы продолжить
           </p>
         </div>
-        <button
-          class="save-button__dialog-close-button flat-button"
-          onclick="window['dialog-id'].close()"
-        >
-          <span class="button__text">OK</span>
-        </button>
+        <form method="dialog">
+          <button 
+            class="save-button__dialog-close-button flat-button"
+            onclick="window['dialog-id'].close()">
+            <span class="button__text">OK</span>
+          </button>
+        </form>
       </dialog>
     </main>
     <script src="./scripts/set-theme.js"></script>
