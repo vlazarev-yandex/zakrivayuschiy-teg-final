@@ -562,15 +562,15 @@
             Вставьте  дискету, чтобы продолжить
           </p>
         </div>
-        <!-- <form onsubmit="event.preventDefault();" method="dialog"> -->
+        <form method="dialog">
           <button
             type="button"
             class="save-button__dialog-close-button flat-button"
-            onclick="window['save-button__dialog-id'].close()"
           >
+          <!-- onclick="window['save-button__dialog-id'].close()" -->
             <span class="button__text">Ок</span>
           </button>
-        <!-- </form> -->
+        </form>
       </dialog>
     </main>
     <script src="./scripts/set-theme.js"></script>

@@ -512,6 +512,7 @@
 }
 
 .save-button__dialog:not([open]) {
+  display: none;
   pointer-events: none;
   opacity: 0;
 }
