@@ -513,9 +513,6 @@
   transition-delay: 0.3s;
 }
 
-.save-button__dialog:is([open]) {
-}
-
 .save-button__dialog-text {
   color: var(--Themes__main-color, #000);
   font-family: var(--header__font-family);
@@ -525,7 +522,7 @@
 }
 
 .save-button__dialog-title-container {
-  display: grid; 
+  display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 12px;
 }
@@ -534,28 +531,28 @@
 /* фильтры для картинок */
 .image__grayscale {
   filter: grayscale(0.5);
-} 
+}
 
 .image__contrast {
   filter: contrast(20%);
-} 
+}
 
 .image__saturate {
   filter: saturate(158%);
-} 
+}
 
 .image__hue-rotate {
   filter: hue-rotate(-90deg);
-} 
+}
 
 .image__sepia {
   filter: sepia(80%);
-} 
+}
 
 .image__invert {
   filter: invert(0.7);
-} 
+}
 
 .image__blur {
   filter: blur(3.2rem);
-} 
+}

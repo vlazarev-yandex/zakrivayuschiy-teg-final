@@ -9,16 +9,16 @@
   --Themes__main-color: var(--Themes__main-color-dark);
   --Themes__background: var(--Themes__background-dark);
   --Themes__background-color: var(--Themes__background-color-dark);
-  --Themes__background-image: var(--Themes__background-image-dark); 
-  --Themes__button-text-color: var(--Themes__button-text-color-dark); 
+  --Themes__background-image: var(--Themes__background-image-dark);
+  --Themes__button-text-color: var(--Themes__button-text-color-dark);
 }
 
 .theme-light {
   --Themes__main-color: var(--Themes__main-color-light);
   --Themes__background: var(--Themes__background-light);
   --Themes__background-color: var(--Themes__background-color-light);
-  --Themes__background-image: var(--Themes__background-image-light); 
-  --Themes__button-text-color: var(--Themes__button-text-color-light); 
+  --Themes__background-image: var(--Themes__background-image-light);
+  --Themes__button-text-color: var(--Themes__button-text-color-light);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,8 +26,8 @@
     --Themes__main-color: var(--Themes__main-color-dark);
     --Themes__background: var(--Themes__background-dark);
     --Themes__background-color: var(--Themes__background-color-dark);
-    --Themes__background-image: var(--Themes__background-image-dark); 
-    --Themes__button-text-color: var(--Themes__button-text-color-dark); 
+    --Themes__background-image: var(--Themes__background-image-dark);
+    --Themes__button-text-color: var(--Themes__button-text-color-dark);
   }
 }
 
@@ -36,7 +36,7 @@
     --Themes__main-color: var(--Themes__main-color-light);
     --Themes__background: var(--Themes__background-light);
     --Themes__background-color: var(--Themes__background-color-light);
-    --Themes__background-image: var(--Themes__background-image-light); 
-    --Themes__button-text-color: var(--Themes__button-text-color-light); 
+    --Themes__background-image: var(--Themes__background-image-light);
+    --Themes__button-text-color: var(--Themes__button-text-color-light);
   }
 }

@@ -3,22 +3,25 @@
 :root {
   --Themes__main-color-light: #000;
   --Themes__background-color-light: #fff;
-  --Themes__background-image-light: 
-    repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
-    repeating-linear-gradient(0deg, #d3d3d3, transparent 2px), 
-    linear-gradient(#e7e7e7 0.01%, #1a1a1a)
-  ;
-  --Themes__button-text-color-light: var(--Themes__background-color-light); 
+  --Themes__background-image-light: repeating-linear-gradient(
+      90deg,
+      #d3d3d3,
+      transparent 2px
+    ),
+    repeating-linear-gradient(0deg, #d3d3d3, transparent 2px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+  --Themes__button-text-color-light: var(--Themes__background-color-light);
 
   --Themes__main-color-dark: #00cc14;
   --Themes__background-color-dark: #000;
-  --Themes__background-image-dark: 
-    repeating-linear-gradient(90deg, #000, transparent 2px),
-    repeating-linear-gradient(0deg, #000, transparent 2px), 
-    linear-gradient(#007f0c, #004306)
-  ;
-  --Themes__button-text-color-dark: var(--Themes__main-color-dark); 
-
+  --Themes__background-image-dark: repeating-linear-gradient(
+      90deg,
+      #000,
+      transparent 2px
+    ),
+    repeating-linear-gradient(0deg, #000, transparent 2px),
+    linear-gradient(#007f0c, #004306);
+  --Themes__button-text-color-dark: var(--Themes__main-color-dark);
 
   --Themes__background-dark: url(../svg/pattern-dark.svg)
     var(--Themes__background-color-dark);
