@@ -478,8 +478,7 @@
 /* ------------------------------------------------------------------------------------------------------------ */
 /* диалоговое окно */
 .save-button__dialog {
-  display: grid;
-  gap: 30px;
+  display: none;
   transition: opacity 0.1s ease-in-out;
 
   width: 357px;
@@ -505,6 +504,12 @@
 .save-button__dialog-close-button {
   width: 100%;
   height: 38px;
+  text-transform: uppercase;
+}
+
+.save-button__dialog:is([open]) {
+  display: grid;
+  gap: 30px;
 }
 
 .save-button__dialog:not([open]) {
