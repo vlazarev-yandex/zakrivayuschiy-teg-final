@@ -1,0 +1,46 @@
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --main-color-light: #000;
+  --background-color-light: #fff;
+  --background-image-light: repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(0deg, #d3d3d3, transparent 2px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+  --button-text-color-light: var(--background-color-light);
+
+  --main-color-dark: #00cc14;
+  --background-color-dark: #000;
+  --background-image-dark: repeating-linear-gradient(
+      90deg,
+      #000 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(0deg, #000 0 2px, transparent 2px 4px),
+    linear-gradient(#007f0c, #004306);
+  --button-text-color-dark: var(--main-color-dark);
+
+  --header__font-family: "Press Start 2P";
+  --header__font-size: 14px;
+  --header__font-size-title: clamp(2.625rem, 2.2143rem + 2.0536vw, 4.0625rem);
+  --header__font-size-subtitle: clamp(
+    0.875rem,
+    calc(0.6769rem + 0.8451vw),
+    1.4375rem
+  );
+
+  --main-section__font-family: "Inter";
+  --main-section__font-size: 18px;
+
+  --heart-sparks: #ff0000;
+
+  /* дефолтно выбрана тёмная тема */
+  --main-color: var(--main-color-dark);
+  --background: var(--background-dark);
+  --background-color: var(--background-color-dark);
+  --background-image: var(--background-image-dark);
+  --button-text-color: var(--button-text-color-dark);
+}
